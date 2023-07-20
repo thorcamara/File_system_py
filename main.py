@@ -1,10 +1,17 @@
 from lib.interface import *
+from lib.file import *
 from time import sleep
+
+file = 'file.txt'
+
+if not fileExists(file):
+    createFile(file)
+
 
 while True:
     answer = menu(['See registered people', 'Register new person', 'Exit the system'])
     if answer == 1:
-        header('Option 1')
+        readFile(file)
     elif answer == 2:
         header('Option 2')
     elif answer == 3:
