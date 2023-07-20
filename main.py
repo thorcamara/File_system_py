@@ -13,10 +13,13 @@ while True:
     if answer == 1:
         readFile(file)
     elif answer == 2:
-        header('Option 2')
+        header('New register')
+        name = str(input('Name: '))
+        age = readInt('Age: ')
+        register(file, name, age)
     elif answer == 3:
         header('Exiting the system... see you later')
         break
     else:
         print('\033[31mERROR! Type a valid option!\033[m')
-    sleep(2)
+    sleep(1)
